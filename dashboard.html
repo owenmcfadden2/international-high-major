@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard &mdash; International College Basketball</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="brand" href="index.html">Overseas<span>Pipeline</span></a>
+  <nav>
+    <a href="index.html">Findings</a>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="map.html">Map</a>
+  </nav>
+</div>
+
+<div class="wrap" style="padding-top:36px;">
+  <span class="eyebrow">Full Roster</span>
+  <h1 style="font-size:32px;">Every player, filterable</h1>
+</div>
+
+<div class="wrap">
+  <div class="dash-controls">
+    <input type="text" id="search" placeholder="Search by name, team, or hometown&hellip;">
+    <select id="filter-cohort">
+      <option value="">All cohorts</option>
+      <option value="2024-25">2024&ndash;25</option>
+      <option value="2025-26">2025&ndash;26</option>
+      <option value="2026-27">2026&ndash;27</option>
+    </select>
+    <select id="filter-country">
+      <option value="">All birth countries</option>
+    </select>
+    <select id="filter-conf">
+      <option value="">All conferences</option>
+    </select>
+    <select id="filter-pos">
+      <option value="">All positions</option>
+    </select>
+  </div>
+  <div class="dash-count" id="count-label"></div>
+
+  <table class="dash-table">
+    <thead>
+      <tr>
+        <th data-key="name">Player</th>
+        <th data-key="pos">Pos</th>
+        <th data-key="birth_country">Born</th>
+        <th data-key="last_pro">Last Pro Stop</th>
+        <th data-key="pro_seasons_count">Pro Szns</th>
+        <th data-key="ncaa">NCAA Path</th>
+        <th data-key="cohort">Cohort</th>
+      </tr>
+    </thead>
+    <tbody id="table-body"></tbody>
+  </table>
+</div>
+
+<footer>
+  <div class="wrap">
+    Momentous Sports Partners &middot; International pipeline tracker &middot; <a href="index.html">&larr; Back to findings</a>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
